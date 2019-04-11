@@ -1,0 +1,11 @@
+{
+    "name": "vf-ice-pred",
+    "description": "-",
+    "authors": "Max Kohler",
+    "version": "1.0.0",
+    "main": "pathToMain",
+    "dependencies": {
+        "glob": "*",
+        "sharp": "*"
+    }
+}

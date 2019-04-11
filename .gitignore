@@ -1,0 +1,12 @@
+*.pyc
+tags
+test
+models
+.idea
+.ipynb_checkpoints/
+node_modules/
+package-lock.json
+facades/
+facades_test/
+facades_train/
+ice-data-raw/
