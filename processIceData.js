@@ -26,7 +26,7 @@ function generateImages(pairs) {
             sharp(pair[1]).resize(500, 500).toBuffer((err, dataB, info) => {
                 sharp({ create: { width: 1000, height: 500, channels: 3, background: { r: 0, g: 0, b: 0 } } })
                     .composite([{ input: dataA, gravity: 'northwest' }, { input: dataB, gravity: 'northeast' }])
-                    .toFile(`${outputDir}/${i}.jpg`, function (err) { });
+                    .toFile(`${outputDir}/${i}.png`, function (err) { });
             })
         });
     }

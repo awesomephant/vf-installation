@@ -10,3 +10,6 @@ facades/
 facades_test/
 facades_train/
 ice-data-raw/
+ice_train/
+ice_test/
+documentation/

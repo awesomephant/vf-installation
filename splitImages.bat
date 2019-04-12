@@ -1,0 +1,1 @@
+python tools/split.py --dir "ice-data-raw/pairs/png/"
