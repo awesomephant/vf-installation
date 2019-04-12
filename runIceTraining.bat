@@ -1,2 +1,2 @@
-python pix2pix.py --mode train --output_dir facades_train --max_epochs 20 --input_dir facades/train --which_direction BtoA --progress_freq 1
-python pix2pix.py --mode test --output_dir facades_test --input_dir facades/val --checkpoint facades_train
+python pix2pix.py --mode train --output_dir ice_train --max_epochs 150 --input_dir ice-data-raw/pairs/png/train --which_direction AtoB --progress_freq 5
+python pix2pix.py --mode test --output_dir ice_test --input_dir ice-data-raw/pairs/png/val --checkpoint ice_train
