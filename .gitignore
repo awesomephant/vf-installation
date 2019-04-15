@@ -13,3 +13,5 @@ ice-data-raw/
 ice_train/
 ice_test/
 documentation/
+ice_export/
+*.png

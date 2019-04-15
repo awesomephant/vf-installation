@@ -1,0 +1,1 @@
+python pix2pix.py --mode export --checkpoint ice_train --output_dir ice_export
