@@ -1,1 +1,1 @@
-python singlePrediction.py --model_dir ice_export --input_file in.png --output_file pred.png
+python singlePrediction.py --model_dir ice_export --input_file in.png --output_file "./app/predictions/pred-%1.png"

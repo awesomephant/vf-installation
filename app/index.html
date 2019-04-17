@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <title>The Sight of Ice Melting</title>
+    <style>
+      body {
+        background: black;
+        overflow: hidden;
+      }
+      a {
+        color: white;
+        position: fixed;
+        bottom: 1rem;
+      }
+      img {
+        display: block;
+        height: 95vh;
+        position: absolute;
+        width: auto;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%)
+      }
+      h2 {
+        position: fixed;
+        top: 2rem;
+        font-family: 'IBM Plex Sans', sans-serif;
+        color: white;
+        font-size: 2.2rem;
+        text-align: center;
+        width: 100%;
+        font-weight: normal;
+      }
+    </style>
+</head>
+<body>
+<h1>The sight of ice melting</h1>
+<img id='result' src="./predictions/pred.png" alt="">
+<h2 id='time'>Time goes here</h2>    
+<a href="#1" id="pred">Make Prediction</a>
+    <script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io();
+  
+  let btn = document.querySelector('#pred');
+  let resultEl = document.querySelector('#result');
+  let timeEl = document.querySelector('#time');
+
+  btn.addEventListener('click', function(e){
+    e.preventDefault()
+    console.log('hi')
+    socket.emit('getPred')
+    socket.on('predDone', function(timestamp){
+      let date = moment(+timestamp);
+      console.log(`Prediction complete (${timestamp})`)
+      timeEl.innerHTML = `${date.format("MMM Do YYYY, HH:mm:ss")}`;
+      resultEl.setAttribute('src', `./predictions/pred-${timestamp}.png`);
+    })
+  })
+</script>
+</body>
+</html>

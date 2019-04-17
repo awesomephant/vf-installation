@@ -6,6 +6,8 @@
     "main": "pathToMain",
     "dependencies": {
         "glob": "*",
-        "sharp": "*"
+        "sharp": "*",
+        "express": "*",
+        "socket.io": "*"
     }
 }
