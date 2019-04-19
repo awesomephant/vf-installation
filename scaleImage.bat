@@ -1,0 +1,1 @@
+gm convert "./app/captures/capture-%1.png" -crop 480x480 -scale 1024x1024 "./app/captures/scaled/capture-%1.png"

@@ -8,6 +8,7 @@
         "glob": "*",
         "sharp": "*",
         "express": "*",
-        "socket.io": "*"
+        "socket.io": "*",
+        "node-webcam": "*"
     }
 }
